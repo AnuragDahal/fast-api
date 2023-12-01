@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        const dwn = async (e) => {
+            e.preventDefault();
+            console.log('clicked');
+            const link = document.querySelector('#link');
+            const url = link.value;
+            await fetch(`/yt?link=${url}`);
+            // window.location.href = url;
+        }
+    </script>
+    <h2>Download yt vdo</h2>
+    <form onsubmit="dwn(event)">
+        <input type="text" name="link" id="link" height="50px" width="100px">
+        <!-- get path from user -->
+        <input type="path"
+        <button onclick="dwn(event)">Download</button>
+    </form>
+</body>
+
+</html>
