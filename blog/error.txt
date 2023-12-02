@@ -1,1 +1,1 @@
-you need to run this separately not inside the fastapi folder open the blog folder separately in code editor and run it.
+you need to change directory to blog using "cd blog" and then run the server
