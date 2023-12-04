@@ -7,3 +7,11 @@ class Blog(Base):
     id=Column(Integer,primary_key=True,index=True)
     title=Column(String)
     body=Column(String)
+
+
+# class User(Base):
+#     __tablename__="Users"
+    
+#     name:Column(str)
+#     email:Column(str)
+#     password:Column(str)

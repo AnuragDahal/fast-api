@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const submit = async (e) => {
+            e.preventDefault();
+            const title = document.querySelector('#title').value;
+            const body = document.querySelector('#body').value;
+            const data = { title, body };
+            console.log(data);
+            const res = await fetch('http://127.0.0.1:8000/blog', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+
+            });
+            const json = await res.json();
+            console.log(json);
+        }
+    </script>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title"><br><br>
+    <label for="body">Body:</label>
+    <textarea id="body" name="body" cols="100" rows="10"></textarea><br><br>
+    <button onclick="submit(event)">
+        Submit
+    </button>
+</body>
+
+</html> -->
