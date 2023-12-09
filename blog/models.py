@@ -9,9 +9,10 @@ class Blog(Base):
     body=Column(String)
 
 
-# class User(Base):
-#     __tablename__="Users"
+class User(Base):
+    __tablename__="user"
     
-#     name:Column(str)
-#     email:Column(str)
-#     password:Column(str)
+    id=Column(Integer,primary_key=True,index=True)
+    name=Column(String)
+    email=Column(String)
+    password=Column(String)

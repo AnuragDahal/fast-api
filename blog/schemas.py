@@ -2,19 +2,29 @@
 from pydantic import BaseModel
 
 
-class Blog(BaseModel):#
-    title:str   
-    body:str
-    
-    
-class show(Blog): 
-    title:str
-    body:str
+class Blog(BaseModel):
+    title: str
+    body: str
 
-    
-    
-# class User(Blog):
-#     name:str
-#     email:str
-#     password:str
-    
+
+class show(Blog):
+    title: str
+    body: str
+
+    class Config():
+        from_attributes = True
+
+
+class User(BaseModel):
+    name: str
+    email: str
+    password: str
+
+
+class ShowUser(BaseModel):
+    name: str
+    email: str
+    password: str
+
+    class Config():
+        from_attributes = True  # orm_mode has been renamed to from_attributes
